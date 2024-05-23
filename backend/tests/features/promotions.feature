@@ -34,6 +34,15 @@ When Eu seleciono “Deletar todas as promoções”
 Then Eu vejo uma mensagem de confirmação de remoção das promoções
 And Eu vejo a  listagem de todas as reservas na página “Reservas publicadas” com seus valores originais sem desconto
 
+Scenario 4: Cadastrar uma promoção em todas as reservas publicadas
+
+Given Eu estou logada como “Hoteleiro” com o login “Maria”  e a senha “let123”
+And Eu estou na página “Reservas publicadas”
+When Eu seleciono “Cadastrar promoção em todas reservas” 
+And Eu realizo o cadastro de uma promoção de “20%” de desconto e “Ilimitada”
+Then Eu vejo uma mensagem de confirmação de cadastro
+And Eu vejo a  listagem de todas as reservas na página “Reservas publicadas” com com a promoção cadastrada
+
 Scenario 6: Deletar todas as promoções com nenhuma promoção cadastrada
 
 Given Eu estou logada como “Hoteleiro” com o login “Maria”  e a senha “let123”
