@@ -32,7 +32,8 @@ And O hotel “Flores” tem uma promoção de “30%” cadastrada com o valor 
 And O hotel “Campos” tem uma promoção de “20%” cadastrada com o valor promocional de “R$ 1120,00” a noite
 When Eu seleciono “Deletar todas as promoções” 
 Then Eu vejo uma mensagem de confirmação de remoção das promoções
-And Eu vejo a  listagem de todas as reservas na página “Reservas publicadas” com seus valores originais sem desconto
+And Eu vejo o hotel "Flores" com seu valor original de "R$ 1300,00" a noite
+And Eu vejo o hotel "Campos" com seu valor original de "R$ 1400,00" a noite
 
 Scenario 4: Cadastrar uma promoção em todas as reservas publicadas
 
