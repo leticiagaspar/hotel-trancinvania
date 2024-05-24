@@ -41,7 +41,17 @@ And Eu estou na página “Reservas publicadas”
 When Eu seleciono “Cadastrar promoção em todas reservas” 
 And Eu realizo o cadastro de uma promoção de “20%” de desconto e “Ilimitada”
 Then Eu vejo uma mensagem de confirmação de cadastro
-And Eu vejo a  listagem de todas as reservas na página “Reservas publicadas” com com a promoção cadastrada
+And Eu vejo a  listagem de todas as reservas na página “Reservas publicadas” com a promoção cadastrada
+
+Scenario 5: Edição na promoção de uma reserva
+
+Given Eu estou logada como “Hoteleiro” com o login “Maria”  e a senha “let123”
+And Eu estou na página “Reservas publicadas”
+And O hotel “Flores” está com uma promoção de “20%” cadastrada 
+When Eu seleciono “Editar promoção” no hotel “Flores”
+And Eu altero o desconto para “60%”
+Then Eu vejo uma mensagem de confirmação
+And Eu vejo a nova promoção na página “Reservas publicadas” 
 
 Scenario 6: Deletar todas as promoções com nenhuma promoção cadastrada
 
@@ -49,7 +59,6 @@ Given Eu estou logada como “Hoteleiro” com o login “Maria”  e a senha �
 And Eu estou na página “Reservas publicadas”
 And Não há nenhum hotel com promoção cadastrada
 When Eu seleciono “Deletar todas as promoções” 
-And Eu altero o desconto para “60%”
-Then Eu vejo uma mensagem de erro de que não há nenhuma promoção cadastrada
+Then Eu posso ver uma mensagem de erro de que não há nenhuma promoção cadastrada
 And Eu continuo na página "Reservas publicadas"
 
