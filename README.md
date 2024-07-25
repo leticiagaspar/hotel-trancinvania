@@ -115,7 +115,6 @@ Abaixo está a estrutura principal dos diretórios e arquivos do projeto:
 O banco de dados é configurado e gerenciado pelo Prisma. Certifique-se de que o Docker está em execução e que o serviço de banco de dados está ativo.
 
 ## Comandos Úteis
-### Backend
 - npm run start: Inicia o servidor.
 - npm run test: Executa os testes.
 - npm run dev: Inicia o frontend.
