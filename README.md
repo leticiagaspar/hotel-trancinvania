@@ -39,8 +39,7 @@ As pessoas que compõem a equipe são:
 - Bianca Duarte Santos (bds)
 - Maria Letícia do Nascimento Gaspar (mlng)
 - Matheus Augusto Monte Silva (mams4)
-- Matheus Galdino de Lima Guilherme (mglg)
-- Thais Neves de Souza (tns2)
+- Mateus Galdino de Lima Guilherme (mglg)
 - Victoria Barbosa Cesar Figueiredo (vbcf)
 
 ## Tecnologias Utilizadas
@@ -55,9 +54,15 @@ As pessoas que compõem a equipe são:
 - React e TypeScript
   - React Hook Form
 - Chakra UI e Aceternity UI
+- ViaCEP API 
+
+### Deployment
+- Render (back-end)
+- Vercel (front-end)
 
 ### Testes
-- Jest-Cucumber
+- Jest-Cucumber (back-end)
+- Cypress (front-end)
 
 ### Outras Ferramentas
 - **Gerenciamento de Projetos**: Notion
@@ -72,6 +77,10 @@ Abaixo está a estrutura principal dos diretórios e arquivos do projeto:
   - **src**: Código fonte do backend, incluindo controllers, services, repositories, entitites, enums, middleware, routes, utils, etc.
   - **tests**: Testes do backend.
 - **config**: Scripts e configurações adicionais.
+- **frontend**: Contém o código fonte do frontend da aplicação, que segue a estrutura abaixo:
+![image](https://github.com/user-attachments/assets/109668d6-59a8-4ab0-a136-f9e3a025b534)
+
+
 ## Configuração e Instalação
 
 ### Pré-requisitos
@@ -79,6 +88,7 @@ Abaixo está a estrutura principal dos diretórios e arquivos do projeto:
 - Node.js
 - Docker
 - Docker Compose
+- React
 
 ### Passos de Instalação
 
@@ -95,6 +105,12 @@ Abaixo está a estrutura principal dos diretórios e arquivos do projeto:
     npx prisma migrate dev
     npm run start
     ```
+3. Configure e inicie o frontend:
+```bash
+    cd frontend
+    npm install
+    npm run dev
+```
 ### Configuração do Banco de Dados
 O banco de dados é configurado e gerenciado pelo Prisma. Certifique-se de que o Docker está em execução e que o serviço de banco de dados está ativo.
 
@@ -102,4 +118,5 @@ O banco de dados é configurado e gerenciado pelo Prisma. Certifique-se de que o
 ### Backend
 - npm run start: Inicia o servidor.
 - npm run test: Executa os testes.
+- npm run dev: Inicia o frontend.
 - npx prisma migrate dev: Executa migrações de banco de dados.
